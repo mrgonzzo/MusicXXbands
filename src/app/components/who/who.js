@@ -11,7 +11,7 @@
 
 function controllerCompWho ($state){
   var vm = this;
- 
+ vm.videoWho='https://www.youtube.com/watch?v=Lelc4pvmp60';
 }
 
 })(angular)

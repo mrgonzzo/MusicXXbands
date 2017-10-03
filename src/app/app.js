@@ -1,11 +1,11 @@
 'use strict';
 (function (angular) {
   /* Declaramos el módulo */
-  angular.module('app', ['ui.router']);
+  angular.module('app', ['ui.router','youtube-embed']);
 
   angular.module('app').config(['$stateProvider', '$urlRouterProvider', appConfig]);
 
-  function appConfig($stateProvider, $urlRouterProvider,ngaudio) {
+  function appConfig($stateProvider, $urlRouterProvider) {
     var home = {
       name: 'home',
       url: '/home',

@@ -11,7 +11,7 @@
 
 function controllerCompTrs ($state){
   var vm = this;
- 
+  vm.videoTrs='https://www.youtube.com/watch?v=UYfFrb6ZECY';
 }
 
 })(angular)

@@ -11,7 +11,7 @@
 
 function controllerCompQueen ($state){
   var vm = this;
- 
+  vm.videoQn='https://www.youtube.com/watch?v=5-zh0a6nDTo';
 }
 
 })(angular)

@@ -11,7 +11,8 @@
 
 function controllerCompTb ($state){
   var vm = this;
- 
+  
+  vm.videoTb='https://www.youtube.com/watch?v=75Oct1Qv8x0'
 }
 
 })(angular)
