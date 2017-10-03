@@ -11,7 +11,7 @@
 
 function controllerCompBar ($state){
   var vm = this;
- 
+
 }
 
 })(angular)

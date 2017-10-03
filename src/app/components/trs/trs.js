@@ -11,7 +11,10 @@
 
 function controllerCompTrs ($state){
   var vm = this;
-  vm.videoTrs='https://www.youtube.com/watch?v=UYfFrb6ZECY';
+  vm.trs = { txt:'The Rolling Stones es una banda británica de rock originaria de Londres. La banda se fundó en abril de 19622​ por Brian Jones, Mick Jagger, Keith Richards, Bill Wyman, Ian Stewart y Charlie Watts.2​ Brian Jones fue despedido en junio de 1969, falleciendo tres semanas después, siendo reemplazado por el guitarrista Mick Taylor, que dejaría el grupo en 1975 y sería a su vez reemplazado por Ron Wood.',
+  img:'app\resources\RollingStones.jpg',
+  video:'https://www.youtube.com/watch?v=UYfFrb6ZECY'
+};
 }
 
 })(angular)

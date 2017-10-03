@@ -1,7 +1,56 @@
-body {background-color:#43D8D8;}
-
+body, html {
+    height: 100%;
+}
+.sorrytext{
+    padding-top: 10%;
+    font-size: 100px;
+    color: mediumblue;
+}
+.bandname{
+    font-size: 48px;
+    color: mediumblue;
+}
+.bandtext{
+    font-size: 24px;
+    color: #FF0000;
+    padding-top: 12%;
+}
+.buttonbar{
+    padding-top: 10%;
+}
 .bar{
-    background-image: url("app/resources/craft-beer-bar-social.jpg");
+    background-image: url("../resources/barsocial.jpg");
+    width: 100%;
+    height:100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.video{
+    width: 800px;
+    height: 600px;
+    
+}
+.whoclass{
+    background-image: url("../resources/The-Who-en-Chile.jpg");
+}
+
+.trsclass{
+    background-image: url("../resources/RollingStones.jpg");
+}
+.qnclass{
+    background-image: url("../resources/Queen.jpg");
+}
+.tbclass{
+    background-image: url("../resources/beatles.jpg");
+}
+.bandclass{
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .embed-responsive {
     position: relative;
@@ -12,7 +61,7 @@ body {background-color:#43D8D8;}
   }
   
   .embed-responsive.embed-responsive-16by9 {
-    padding-bottom: 56.25%;
+    padding-bottom: 20%;
   }
   
   .embed-responsive-item {
