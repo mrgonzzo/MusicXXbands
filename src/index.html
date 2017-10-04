@@ -1,30 +1,41 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html class="no-js" lang="" ng-app="app" ng-strict-di>
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Wikicountry - Angular</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
- <link href="app/styles/bootstrap.min.css" rel="stylesheet">
- <link href="app/styles/normalize.css" rel="stylesheet">
-    <meta name="theme-color" content="#637082">
-    <link rel="stylesheet" href="app/styles/app.css">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-
-<body ng-app="app" ng-strict-di>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-5J45DBW');
+        </script>
+        <!-- End Google Tag Manager -->
     <script src="vendor/angular.min.js"></script>
     <script src="vendor/angular-ui-router.min.js"></script>
     <script src="vendor/angular-youtube-embed.js"></script>
     <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="vendor/ngMeta.js"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title ng-bind="ngMeta['og:title']"></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="app/styles/bootstrap.min.css" rel="stylesheet">
+    <link href="app/styles/normalize.css" rel="stylesheet">
+    <meta name="theme-color" content="#637082">
+    <link rel="stylesheet" href="app/styles/app.css">
+
+    <meta property="og:title" content="{{ngMeta['og:title']}}" />
+    <meta property="og:description" content="{{ngMeta['og:description']}}" />
+    <meta name="keywords" content="{{ngMeta['og:keywords']}}" />
+
+
+</head>
+
+<body >
     <!-- our app -->
     <script src="app/app.js"></script>
-    <script src="app/services/card-factory.js"></script>
-    <script src="app/services/score-factory.js"></script>
-    <script src="app/services/sound-factory.js"></script>
-    
+
     <script src="app/components/home/home.js"></script>
     <script src="app/components/bar/bar.js"></script>
     <script src="app/components/foo/foo.js"></script>
@@ -33,13 +44,13 @@
     <script src="app/components/tb/tb.js"></script>
     <script src="app/components/who/who.js"></script>
     <!-- Put your HTML code here -->
-     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="vendor/bootstrap.min.js"></script>
-    
-    <ui-view ></ui-view>
-    
+
+    <ui-view></ui-view>
+
 
 </body>
 
