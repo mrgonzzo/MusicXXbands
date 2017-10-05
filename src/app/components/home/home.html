@@ -6,7 +6,7 @@
     <button 
     ng-repeat="item in compHome.allbands track by $index"
     item-band="item"
-           ng-click="compHome.goToBand(item.url,item.name,item.id)">{{item.name}}</button>
+           ng-click="compHome.goToBand(item.url,item.name,item.id,item.description,item.keywords)">{{item.name}}</button>
     
 
 </div>

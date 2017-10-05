@@ -8,10 +8,10 @@
   }]);
 
   function appConfig($stateProvider, $urlRouterProvider, ngMetaProvider) {
-    console.log('en app.js');
+
     var home = {
       name: 'home',
-      url: '/home',
+      url: '/',
       template: '<comp-home></comp-home>',
       data: {
         meta: {
@@ -48,24 +48,25 @@
     };
     var band = {
       name: 'band',
-      url: '/band/:nameBand',
+      url: '/:url',
       params: {
         url: { squash: true, value: null },
         name: { squash: true, value: null },
-        id: { squash: true, value: null }
+        id: { squash: true, value: null },
+        description: { squash: true, value: null },
+        keywords: { squash: true, value: null }
       },
       template: '<comp-band></comp-band>',
       data: {
         meta: {
-          'og:title': ":nameBand",
-          'og:description': 'The Rolling Stones sample page with a brief description of the rock band and the youtube video "Angie"',
-          'og:keywords': 'rock, Rolling Stones, "Angie"'
+          'og:title': '',
+          'og:description': ":description",
+          'og:keywords': ":keywords"
         }
       }
     };
 
     $stateProvider.state(home);
-    console.log('state', $stateProvider.state, 'home', home);
     $stateProvider.state(foo);
     $stateProvider.state(bar);
     $stateProvider.state(band);
