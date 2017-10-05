@@ -73,12 +73,13 @@
                 //lo optimo es usar los tres iguales para comprobar tambien el tipo además del valor (más eficiente)
                 if (idband === bandarray[i].id) {
                     band = bandarray[i];
+                    
                 }
             }
             return band;
         };
-
-
+         
+          
         return module;
     };
 })(angular);

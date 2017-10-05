@@ -52,18 +52,10 @@
       params: {
         url: { squash: true, value: null },
         name: { squash: true, value: null },
-        id: { squash: true, value: null },
-        description: { squash: true, value: null },
-        keywords: { squash: true, value: null }
+        id: { squash: true, value: null }
       },
       template: '<comp-band></comp-band>',
-      data: {
-        meta: {
-          'og:title': '',
-          'og:description': ":description",
-          'og:keywords': ":keywords"
-        }
-      }
+     
     };
 
     $stateProvider.state(home);
