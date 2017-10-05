@@ -4,13 +4,19 @@
     // otra opción es poner aquí directamente el html asignándoselo a template:
     templateUrl:  'app/components/home/home.html',
     // en controller definimos la función que escribimos abajo
-   controller: ['$state',controllerCompHome],
+   controller: ['$state','bandFactory',controllerCompHome],
     // declaramos un alias para no tener que usar $ctrl.
-   controllerAs: 'compHome'
+   controllerAs: 'compHome',
+   bindings: {
+    itemBand: '<'
+}
 });
 
-function controllerCompHome ($state){
+function controllerCompHome ($state,bandFactory){
   var vm = this;
+  
+  vm.allbands = bandFactory.getAllbands();
+  console.log( vm.allbands)
 
   vm.goToFoo=function(){
     $state.go('foo');
@@ -18,18 +24,16 @@ function controllerCompHome ($state){
   vm.goToBar=function(){
      $state.go('bar');
   }
-  vm.goToTrs=function(){
-    $state.go('trs');
+  
+  vm.goToBand=function(_urlBand_,_nameBand_,_idBand_){
+    console.log( 'urlBand' , _urlBand_)
+    $state.go('band', {url:_urlBand_,name:_nameBand_,id:_idBand_} );
+
  }
- vm.goToTb=function(){
-  $state.go('tb');
-}
-vm.goToQn=function(){
-  $state.go('queen');
-}
-vm.goToWho=function(){
-  $state.go('who');
-}
+
+
+
+
 
 } //end controller
 
