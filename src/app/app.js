@@ -47,9 +47,10 @@
         }
       }
     };
+    /** si dejo url:'/:url solo, el urlRouterProvider se confunde al estar el parametro :url vacio */
     var band = {
       name: 'band',
-      url: '/:url',
+      url: '/band/:url',
       params: {
         url: { squash: true, value: null },
         name: { squash: true, value: null },
