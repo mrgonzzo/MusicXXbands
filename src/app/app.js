@@ -3,12 +3,12 @@
   /* Declaramos el módulo */
   angular.module('app', ['ui.router', 'youtube-embed', 'ngMeta']);
 
-  angular.module('app').config(['$stateProvider', '$urlRouterProvider', 'ngMetaProvider', appConfig]).run(['ngMeta', function (ngMeta) {
+  angular.module('app').config(['$stateProvider', '$urlRouterProvider','$locationProvider', 'ngMetaProvider', appConfig]).run(['ngMeta', function (ngMeta) {
     ngMeta.init();
   }]);
 
-  function appConfig($stateProvider, $urlRouterProvider, ngMetaProvider) {
-
+  function appConfig($stateProvider, $urlRouterProvider, $locationProvider, ngMetaProvider) {
+    
     var home = {
       name: 'home',
       url: '/',
@@ -58,6 +58,8 @@
      
     };
 
+   // $locationProvider.html5Mode(false);
+    //$locationProvider.hashPrefix('');
     $stateProvider.state(home);
     $stateProvider.state(foo);
     $stateProvider.state(bar);
