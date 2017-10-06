@@ -11,7 +11,7 @@
 
     var home = {
       name: 'home',
-      url: '/home',
+      url: '/',
       template: '<comp-home></comp-home>',
       data: {
         meta: {
@@ -102,6 +102,6 @@
     $stateProvider.state(tb);
     $stateProvider.state(queen);
     $stateProvider.state(who);
-    $urlRouterProvider.otherwise('/home');
+    $urlRouterProvider.otherwise('/');
   }
 })(angular);
