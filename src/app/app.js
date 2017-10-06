@@ -3,23 +3,24 @@
   /* Declaramos el módulo */
   angular.module('app', ['ui.router', 'youtube-embed', 'ngMeta']);
 
-  angular.module('app').config(['$stateProvider', '$urlRouterProvider','$locationProvider', 'ngMetaProvider', appConfig]).run(['ngMeta', function (ngMeta) {
+  angular.module('app').config(['ngMetaProvider','$stateProvider', '$urlRouterProvider', appConfig]).run(['ngMeta', function (ngMeta) {
     ngMeta.init();
   }]);
 
-  function appConfig($stateProvider, $urlRouterProvider, $locationProvider, ngMetaProvider) {
+  function appConfig(ngMetaProvider, $stateProvider, $urlRouterProvider ) {
     
     var home = {
       name: 'home',
       url: '/',
-      template: '<comp-home></comp-home>',
       data: {
         meta: {
           'og:title': "Angular Rocks",
           'og:description': 'Esto es la descripción por defecto',
           'og:keywords': 'angular rocks default'
         }
-      }
+      },
+      template: '<comp-home></comp-home>'
+      
     };
     var foo = {
       name: 'foo',
@@ -54,12 +55,10 @@
         name: { squash: true, value: null },
         id: { squash: true, value: null }
       },
-      template: '<comp-band></comp-band>',
+      template: '<comp-band></comp-band>'
      
     };
 
-   // $locationProvider.html5Mode(false);
-    //$locationProvider.hashPrefix('');
     $stateProvider.state(home);
     $stateProvider.state(foo);
     $stateProvider.state(bar);
