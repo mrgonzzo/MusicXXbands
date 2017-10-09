@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "pretest": "npm install",
+    "test": "karma start karma.conf.js"
   },
   "repository": {
     "type": "git",
@@ -17,9 +18,15 @@
   },
   "homepage": "https://github.com/mrgonzzo/MusicXXbands#readme",
   "devDependencies": {
+    "angular-mocks": "^1.6.6",
     "browser-sync": "^2.18.13",
     "gulp": "^3.9.1",
-    "gulp-eslint": "^4.0.0"
+    "gulp-eslint": "^4.0.0",
+    "karma": "^1.7.1",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-firefox-launcher": "^1.0.1",
+    "karma-jasmine": "^0.1.0",
+    "karma-ng-html2js-preprocessor": "^1.0.0"
   },
   "dependencies": {
     "@uirouter/angularjs": "^1.0.7",
@@ -27,6 +34,7 @@
     "angular-ui-router": "^1.0.3",
     "angular-youtube-embed": "^1.3.1",
     "bootstrap": "^3.3.7",
+    "jquery": "^3.2.1",
     "ng-meta": "^1.0.2",
     "normalize.css": "^7.0.0"
   }
