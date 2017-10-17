@@ -1,10 +1,12 @@
 module.exports = function (config) {
     config.set({
-        basePath: './',
+        basePath: '',
         files: [
-            'src/vendor/angular.min.js',
-            'src/mocks/mocks.js',
-            'src/app/**/**/*.js',
+            'src/vendor/*.js',
+            'src/mocks/*.js',
+            'src/app/*.js',
+            'src/app/components/**/*.js',
+            'src/app/services/*.js',
             'test/*.js'
         ],
         
